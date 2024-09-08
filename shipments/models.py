@@ -3,8 +3,8 @@ from clients.models import Clients
 from drivers.models import Driver
 # Create your models here.
 STATUS = (
-    ('Shipped', _('Shipped')),
-    ('Delivered', _('Delivered')),
+    ('Shipped', 'Shipped'),
+    ('Delivered', 'Delivered'),
 )
 
 
@@ -21,4 +21,4 @@ class Shipments(models.Model):
         choices=STATUS, null=True, blank=True, default=STATUS[0][0])
 
     def __str__(self):
-        return self.name
+        return self.bill_number
